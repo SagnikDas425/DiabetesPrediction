@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Page</title>
+    <style>
+        body {
+            background-image:url("{% static '/DiabetesPrediction/images/image2.jpg' %}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .main {
+            position: fixed;
+            top: 140px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50%;
+            background-color: #5ced73;
+            border-radius: 10px;
+            text-align: center;
+            padding: 5%;
+            }
+        h1{
+        color:black;
+        font-size:30px;
+        font-weight:bold;
+        }
+        input[type=submit]{
+        background-color:Orange;
+        border:2px;
+        color:white;
+        padding:8px 16px;
+        cursor:pointer;
+        margin-top:15px;
+        border-radius: 12px;
+        }
+        input[type=submit]:hover {
+            background-color: Red;
+            transform: scale(1.05);
+        }
+        input[type=submit]:active {
+            background-color: Red;
+            transform: scale(1);}
+
+    </style>
+</head>
+<body>
+    <div align = 'center' class="main">
+         <h1>Please enter the following information:</h1>
+        <form action = "result">
+            <table align = "center">
+                <tr>
+                <td align = "right">Gender(Female(0)/(Male(1)):</td>
+                <td align = "left"><input type="text" name="n1"></td>
+                </tr>
+                <tr>
+                <td align = "right">Age:</td>
+                <td align = "left"><input type="text" name="n2"></td>
+                </tr>
+                <tr>
+                <td align = "right">Hypertension:</td>
+                <td align = "left"><input type="text" name="n3"></td>
+                 </tr>
+                <tr>
+                <td align = "right">Heart Disease:</td>
+                <td align = "left"><input type="text" name="n4"></td>
+                </tr>
+                <tr>
+                    <td align = "right">Smoking History:</td>
+                <td align = "left"><input type="text" name="n5"></td>
+                </tr>
+                <tr>
+                <td align = "right">BMI:</td>
+                <td align = "left"><input type="text" name="n6"></td>
+                </tr>
+                <tr>
+                <td align = "right">HbA1c level:</td>
+                <td align = "left"><input type="text" name="n7"></td>
+                </tr>
+                <tr>
+                <td align = "right">Blood Glucose Level:</td>
+                <td align = "left"><input type="text" name="n8"></td>
+                </tr>
+            </table>
+            <input type="submit">
+        </form>
+        Result:{{result2}}
+        </div>
+</body>
+</html>
